@@ -1,0 +1,16 @@
+name:             Clementine
+url:              http://clementine.radiatedpixel.com
+markdown:         kramdown
+pygments:         false
+exclude:          [
+                    '.sass-cache',
+                    'node_modules',
+                    'scss',
+                    'Gruntfile.js',
+                    'package.json',
+                    '*.sublime-project',
+                    '*.sublime-workspace',
+                    '*.bat',
+                    '*.map',
+                    '*.zip'
+                  ]

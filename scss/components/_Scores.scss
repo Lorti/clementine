@@ -1,0 +1,57 @@
+/**
+ * SCORES
+ * @author office@manuelwieser.com
+ */
+
+.Scores {
+  h2 { text-align: center; }
+  h3 {
+    @include rem(margin-top, $baseLineHeight * 1.5);
+    @include rem(margin-bottom, $baseLineHeight * 0.5);
+  }
+}
+
+.Scores-table {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s ease-in-out;
+  &.s-loaded { max-height: 480px; }
+
+  table {
+    width: 100%;
+    border-radius: 3px;
+    background-color: rgba(lighten($baseBackgroundColor, 10%), 0.75);
+    tr:nth-child(odd) { background-color: rgba(lighten($baseBackgroundColor, 15%), 0.75); }
+    td:first-child { width: 20%; }
+    td {
+      @include rem(padding-top, $baseLineHeight * 0.25);
+      @include rem(padding-left, $baseLineHeight * 0.5);
+      @include rem(padding-bottom, $baseLineHeight * 0.25);
+      @include rem(padding-right, $baseLineHeight * 0.5);
+    }
+    td:last-child { text-align: right; }
+  }
+}
+
+.Scores-table--colored {
+  %trophy {
+    display: inline-block;
+    margin-left: 6px;
+    @include rem(font-size, $baseLineHeight * 0.5);
+  }
+  .gold span:after {
+    @extend %trophy;
+    color: gold;
+    content: 'Gold Trophy';
+  }
+  .silver span:after {
+    @extend %trophy;
+    color: silver;
+    content: 'Silver Trophy';
+  }
+  .bronze span:after {
+    @extend %trophy;
+    color: brown;
+    content: 'Bronze Trophy';
+  }
+}

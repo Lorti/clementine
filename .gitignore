@@ -1,1 +1,7 @@
-_site/
+.sass-cache
+_site
+node_modules
+*.sublime-project
+*.sublime-workspace
+*.zip
+*.map

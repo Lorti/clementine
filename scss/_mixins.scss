@@ -1,0 +1,51 @@
+/**
+ * MIXINS
+ * @author office@manuelwieser.com
+ */
+
+@mixin breakpoint($breakpoint: null) {
+  @if $breakpoint == null {
+    @media (min-width: 480px) { @content; }
+  }
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after { clear: both; }
+  & {
+    *zoom: 1;
+  }
+}
+
+/**
+ * rem($property, $pxValues)
+ * This mixin converts one or more pixel values to root em units.
+ *
+ * 1. Convert the base font size into rem units.
+ * 2. Print the property with pixel values as a fallback for older browsers.
+ * 3. If there is only one numeric value, return the declaration for it.
+ * 4. If the value is zero or not a number, return it unaltered.
+ */
+@mixin rem($property, $pxValues) {
+  $remFontSize: 16px / 1rem * 1; // 1
+  #{$property}: $pxValues; // 2
+
+  @if type-of($pxValues) == "number" { // 3
+    #{$property}: $pxValues / $remFontSize;
+  }
+  @else {
+    $remValues: ();
+    @each $value in $pxValues {
+      @if $value == 0 or type-of($value) != "number" { // 4
+        $remValues: append($remValues, $value);
+      }
+      @else {
+        $remValues: append($remValues, $value / $remFontSize); }
+      }
+    #{$property}: $remValues;
+  }
+}

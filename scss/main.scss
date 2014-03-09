@@ -1,0 +1,47 @@
+/**
+ * http://clementine.radiatedpixel.com/
+ * @author office@manuelwieser.com
+ */
+
+@import "variables";
+@import "functions";
+@import "mixins";
+
+@import "reset";
+@import "typography";
+
+@import "utilities";
+
+/**
+ * Components
+ * https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md
+ */
+
+@import "components/Animation";
+@import "components/Badges";
+@import "components/Scores";
+
+h1 { position: absolute; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 480px;
+}
+.copy {
+  position: relative;
+  margin-top: -40px;
+  border-radius: 3px;
+  background-color: rgba(lighten($baseBackgroundColor, 10%), 0.75);
+  @include rem(padding, $baseLineHeight * 0.5);
+}
+footer {
+  @include rem(margin-top, $baseLineHeight);
+  @include rem(margin-bottom, $baseLineHeight);
+  text-align: center;
+  small { color: darken($baseColor, 20%); }
+}
+
+@include breakpoint {
+  html { font-size: 100%; }
+}

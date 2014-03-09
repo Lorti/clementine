@@ -1,0 +1,71 @@
+/**
+ * VARIABLES
+ * @author office@manuelwieser.com
+ */
+
+$logoAspectRatio: 1.6;
+
+$baseFontSize: 16px;
+$modularScale: 1.25;
+$baseLineHeight: 24px;
+
+$baseColor: #f2f2f2;
+$baseBackgroundColor: #ad513e;
+$highlightColor: #fff;
+
+
+
+$character-space: "\0020";       // space
+$character-nbsp: "\00a0";        // non-breaking space
+
+$character-lsquo-en: "\2018";    // left single curly quote
+$character-rsquo-en: "\2019";    // right single curly quote
+$character-ldquo-en: "\201C";    // left double curly quote
+$character-rdquo-en: "\201D";    // right double curly quote
+
+$character-apos-de: "\2019";     // apostrope
+$character-lsquo-de: "\201A";    // left single curly quote
+$character-rsquo-de: "\2018";    // right single curly quote
+$character-ldquo-de: "\201E";    // left double curly quote
+$character-rdquo-de: "\201C";    // right double curly quote
+
+$character-lsaquo: "\2039";      // left single angle quote (guillemet)
+$character-rsaquo: "\203A";      // right single angle quote (guillemet)
+$character-laquo: "\00ab";       // left double angle quote (guillemet)
+$character-raquo: "\00bb";       // right double angle quote (guillemet)
+
+$character-mdash: "\2014";       // em dash (mutton)
+$character-ndash: "\2013";       // en dash (nut)
+$character-hyphen: "\2010";      // hyphen
+
+$character-amp: "\0026";         // ampersand
+$character-gt: "\003e";          // greater than
+$character-lt: "\003c";          // less than
+$character-times: "\00D7";       // times
+$character-bigtimes: "\2715";    // big times
+$character-checkmark: "\2713";   // checkmark
+
+$character-sect: "\00a7";        // section sign
+$character-para: "\00b6";        // pilcrow
+
+$character-middot: "\00b7";      // middot
+$character-oslash: "\00f8";      // o-slash
+$character-bull: "\2022";        // bullet
+$character-whibull: "\25E6";     // white bullet
+$character-hellip: "\2026";      // horizontal ellipsis
+$character-vellip: "\22EE";      // vertical ellipsis
+$character-midhellip: "\22EF";   // midline horizontal ellipsis
+
+$character-utri: "\25b2";        // up-pointing triangle
+$character-dtri: "\25bc";        // down-pointing triangle
+$character-ltri: "\25c0";        // left-pointing triangle
+$character-rtri: "\25b6";        // right-pointing triangle
+$character-ustri: "\25b4";       // up-pointing small triangle
+$character-dstri: "\25be";       // down-pointing small triangle
+$character-lstri: "\25c2";       // left-pointing small triangle
+$character-rstri: "\25b8";       // right-pointing small triangle
+$character-diamond: "\25c6";     // diamond
+$character-fisheye: "\25c9";     // fisheye
+$character-bullseye: "\25ce";    // bullseye
+$character-circle: "\25cf";      // circle
+$character-whitecircle: "\25cb"; // white circle

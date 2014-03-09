@@ -1,0 +1,21 @@
+/**
+ * FUNCTIONS
+ * @author office@manuelwieser.com
+ */
+
+/**
+ * pow($x, $n)
+ */
+@function pow($x, $n) {
+  $value: 1;
+  @if $n >= 0 {
+    @for $i from 1 through $n {
+      $value: $value * $x;
+    }
+  } @else {
+    @for $i from $n to 0 {
+      $value: $value / $x;
+    }
+  }
+  @return $value;
+}

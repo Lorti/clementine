@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="Play Clementine, the skill-based brain-twisting platformer, on iOS, Android or Windows Phone. Can you run further than your friends and beat their high scores?!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="office@manuelwieser.com">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+    <script src="{{ site.url }}/js/modernizr.min.js"></script>
+  </head>
+  <body>
+
+    {{ content }}
+
+  </body>
+  <script src="{{ site.url }}/js/main.min.js"></script>
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47871809-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <script>
+    var _gaq = _gaq || [];
+
+    function _gaLt(event){
+      var el = event.srcElement || event.target;
+
+      while(el && (typeof el.tagName == 'undefined' || el.tagName.toLowerCase() != 'a' || !el.href))
+        el = el.parentNode;
+
+      if(el && el.href){
+        if(el.href.indexOf(location.host) == -1){ /* external link */
+          _gaq.push(["_trackEvent", "Outgoing Links", el.href, document.location.pathname + document.location.search]);
+          if(!el.target || el.target.match(/^_(self|parent|top)$/i)){
+            setTimeout(function(){
+              document.location.href = el.href;
+            }.bind(el),200);
+            event.preventDefault ? event.preventDefault() : event.returnValue = !1;
+          }
+        }
+
+      }
+    }
+
+    var d = document;
+    d.addEventListener ? d.addEventListener("click",_gaLt,!1) : d.attachEvent && d.attachEvent("onclick",_gaLt);
+  </script>
+</html>

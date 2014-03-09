@@ -1,0 +1,59 @@
+/**
+ * ANIMATION
+ * @author office@manuelwieser.com
+ */
+
+.Animation {
+  position: relative;
+  transform: translate3d(0,0,0);
+  @include rem(margin, -$baseLineHeight);
+}
+
+.Animation-background {
+  width: 100%;
+  height: 256px;
+  background: url(../images/background_512x256.jpg) repeat;
+  animation: BACKGROUND 13s linear infinite;
+}
+
+.Animation-platforms {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 183px;
+  background: url(../images/platforms_590x183_faded.png) repeat;
+  animation: PLATFORMS 10s linear infinite;
+}
+
+.Animation-clementine {
+  position: absolute;
+  bottom: 83px;
+  left: 33%;
+  margin-left: -24px;
+  width: 48px;
+  height: 48px;
+  background-image: url(../images/clementine_960x48.png);
+  animation: CLEMENTINE .8s steps(19) infinite;
+}
+
+.Animation-title {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin-left: -139px;
+}
+
+@keyframes BACKGROUND {
+  from { background-position: 0; }
+  to   { background-position: -512px; }
+}
+
+@keyframes PLATFORMS {
+  from { background-position: 0; }
+  to   { background-position: -590px; }
+}
+
+@keyframes CLEMENTINE {
+  from { background-position: 0; }
+  to   { background-position: -912px; }
+}

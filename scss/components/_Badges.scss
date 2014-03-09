@@ -1,0 +1,35 @@
+/**
+ * BADGES
+ * @author office@manuelwieser.com
+ */
+
+.Badges {
+  @include breakpoint {
+    @include clearfix;
+  }
+}
+
+.Badges-item {
+  display: block;
+  @include rem(margin-top, $baseLineHeight);
+  @include rem(margin-bottom, $baseLineHeight);
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include breakpoint {
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 33%;
+    text-align: center;
+    line-height: 45px;
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

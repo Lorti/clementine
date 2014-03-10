@@ -28,18 +28,13 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-  </script>
-  <script>
-    var _gaq = _gaq || [];
 
     function _gaLt(event){
       var el = event.srcElement || event.target;
-
       while(el && (typeof el.tagName == 'undefined' || el.tagName.toLowerCase() != 'a' || !el.href))
         el = el.parentNode;
-
       if(el && el.href){
-        if(el.href.indexOf(location.host) == -1){ /* external link */
+        if(el.href.indexOf(location.host) == -1){
           _gaq.push(["_trackEvent", "Outgoing Links", el.href, document.location.pathname + document.location.search]);
           if(!el.target || el.target.match(/^_(self|parent|top)$/i)){
             setTimeout(function(){
@@ -48,7 +43,6 @@
             event.preventDefault ? event.preventDefault() : event.returnValue = !1;
           }
         }
-
       }
     }
 

@@ -66,11 +66,7 @@ dailyRequest.onreadystatechange = function() {
 };
 
 var now = new Date(),
-    beforeOneWeek = new Date(now.getTime() - 60 * 60 * 24 * 7 * 1000),
-    day = beforeOneWeek.getDay(),
-    diffToMonday = beforeOneWeek.getDate() - day + (day === 0 ? -6 : 1),
-    lastMonday = new Date(beforeOneWeek.setDate(diffToMonday)),
-    lastSunday = new Date(beforeOneWeek.setDate(diffToMonday + 6));
+    lastSunday = new Date(now.getTime() - 60 * 60 * 24 * now.getDay() * 1000);
 
 var weeklyTimestamp = lastSunday.getFullYear().toString().slice(-2) +
                       pad(lastSunday.getMonth() + 1, 2) +
